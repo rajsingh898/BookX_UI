@@ -1,0 +1,173 @@
+.book-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+/* Page background */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7f9fc, #eef2f7);
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Grid container */
+.grid {
+  width: 100%;
+  max-width: 1200px; /* 👈 THIS fixes full-width ugliness */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.75rem;
+}
+
+
+
+/* Title */
+.book-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+}
+
+/* Author */
+.book-card .author {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+/* Genre badge */
+.book-card .genre {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: #fce7f3;
+  color: #be185d;
+  margin-bottom: 0.75rem;
+}
+
+
+/* Description */
+.book-card .desc {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Read status badge */
+.status {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.status.read {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.status.unread {
+  background: #ffe4e6;
+  color: #be123c;
+}
+
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.actions button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Primary button */
+.actions button:not(.secondary):not(.disabled) {
+  background: linear-gradient(90deg, #8d4167, #8957b7);
+  color: white;
+}
+
+.actions button:not(.secondary):not(.disabled):hover {
+  background: linear-gradient(90deg, #883a5d, #6f4894);
+  transform: translateY(-1px);
+}
+
+.actions button:not(.secondary):not(.disabled):hover {
+  background:linear-gradient(90deg, #a52f65, #9759d0);
+  transform: translateY(-1px);
+}
+
+/* Secondary button */
+.actions .secondary {
+  background: #fdf2ff;
+  color: #7e22ce;
+}
+
+.actions .secondary:hover {
+  background: #fae8ff;
+}
+
+
+/* Disabled button */
+.actions .disabled,
+.actions button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+.book-card select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+.match-btn {
+  margin-top: 12px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #8d4167, #8957b7);
+  color: white;
+
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.match-btn:hover {
+   background:linear-gradient(90deg, #a52f65, #9759d0);
+  transform: translateY(-1px);
+}
+
