@@ -37,7 +37,7 @@ function Login() {
     setSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:8079/auth/login", {
+      const response = await fetch("https://api-gateway-0xes.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

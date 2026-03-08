@@ -48,7 +48,7 @@ function Register() {
     setSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:8079/auth/register", {
+      const response = await fetch("https://api-gateway-0xes.onrender.com/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, fullName, password }),
