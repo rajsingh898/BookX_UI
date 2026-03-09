@@ -1,6 +1,21 @@
+import { useEffect } from "react";
 import "./Loader.css";
 
 function Loader() {
+
+  useEffect(() => {
+    const services = [
+      "https://api-gateway-0xes.onrender.com",
+      "https://user-service-qxix.onrender.com",
+      "https://book-service-w0pa.onrender.com"
+    ];
+
+    services.forEach((url) => {
+      fetch(url).catch(() => {});
+    });
+
+  }, []);
+
   return (
     <div className="spine-loader">
       <div className="spine-stack">
@@ -15,4 +30,3 @@ function Loader() {
 }
 
 export default Loader;
- 

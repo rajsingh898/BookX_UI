@@ -24,7 +24,7 @@ function Register() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPageLoading(false);
-    }, 1500);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
